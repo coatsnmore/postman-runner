@@ -6,8 +6,17 @@ Includes an example API and collection using `express`.
 
 [License](LICENSE.md)
 
+>Prerequisites:
+```
+node -v
+npm -v
+```
+tested on 
+![](node-version.gif)
+
 >Quick Start Demo: 
 ```
+> git clone https://github.com/coatsnmore/postman-runner
 > npm install && npm run start
 > npm run test
 ```
