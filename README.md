@@ -2,7 +2,7 @@
 
 Opinionated Test Runner built on [newman](https://github.com/postmanlabs/newman) to help test APIs using Postman collections.
 
-Also Includes an [example OAS](robot-oas.yaml), [Postman collection](collection.json), and a [demo API](server.js) implementation using [express](https://expressjs.com/).
+Also Includes an [example OAS](robot-oas.yml), [Postman collection](collection.json), and a [demo API](server.js) implementation using [express](https://expressjs.com/).
 
 [License](LICENSE.md)
 
@@ -22,7 +22,7 @@ Also Includes an [example OAS](robot-oas.yaml), [Postman collection](collection.
 ## Project Intentions:
 
 - [ ] provide temporary values e.g. access tokens
-- [x] conditional flow APIs e.g. POST then GET [solved with `postman.setNextRequests`] 
+- [ ] example conditional flow APIs e.g. POST then GET [solved with `postman.setNextRequests`] 
 - [ ] switch environments
 - [ ] run multiple collections
 - [ ] test coverage against oas
