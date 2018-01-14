@@ -1,0 +1,141 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: Robot Overlord
+host: playground.apistudio.io
+basePath: /try/159bc44e-ecc6-4ff4-ac2d-39275e8a5872
+schemes:
+  - http
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /robots:
+    get:
+      description: Returns all robots
+      operationId: getRobots
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/Robots"
+        401:
+          description: Unauthenticated
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        403:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        429:
+          description: Too Many Requests
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        500:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+    post:
+      description: Create a robot
+      operationId: createRobot
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: "#/definitions/Robots"
+        400:
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        401:
+          description: Unauthenticated
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        403:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        429:
+          description: Too Many Requests
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        500:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+  /robots/{id}:
+    get:
+      description: Returns robot based on ID
+      summary: Find robot by ID
+      operationId: getRobotById
+      produces:
+      - application/json
+      - text/html
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Robot'
+        401:
+          description: Unauthenticated
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        403:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        429:
+          description: Too Many Requests
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        500:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+    parameters:
+    - name: id
+      in: path
+      description: ID of robot to find
+      required: true
+      type: array
+      items:
+        type: string
+definitions:
+  ErrorResponse:
+    type: object
+    properties:
+      message:
+        type: string
+        description: error message
+  Robots:
+    type: object
+    properties:
+      name:
+        type: array
+        items:
+          $ref: '#/definitions/Robot'
+  Robot:
+    type: object
+    properties:
+      name:
+        type: string
+        description: easy to remember name
+      id:
+        type: integer
+        description: proper id for robot
+      status:
+        type: string
+        enum:
+          - online
+          - asleep
+          - dreaming
+      lat:
+        type: number
+        description: long e.g. '-82.9988'
+      lat:
+        type: number
+        description: lat e.g. '39.9612'
