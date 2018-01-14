@@ -1,14 +1,14 @@
 {
   "name": "api-postman",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An opinionated API Test Runner",
+  "main": "demo.js",
   "scripts": {
-    "test": "node run-collection.js",
+    "demo": "node run-collection.js",
     "start": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nicholas Coats",
+  "license": "Apache",
   "devDependencies": {
     "nodemon": "^1.14.11"
   },

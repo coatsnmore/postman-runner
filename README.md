@@ -2,7 +2,7 @@
 
 Opinionated Test Runner built on [newman](https://github.com/postmanlabs/newman) to help test APIs using Postman collections.
 
-Includes an example API and collection using [express].
+Also Includes an example OAS, Postman collection, and a demo API implementation using [express](https://expressjs.com/).
 
 [License](LICENSE.md)
 
@@ -17,7 +17,7 @@ Includes an example API and collection using [express].
 ```
 > git clone https://github.com/coatsnmore/postman-runner
 > npm install && npm run start
-> npm run test
+> npm run demo
 ```
 ## Project Intentions:
 
@@ -33,6 +33,7 @@ Includes an example API and collection using [express].
 - [ ] CLI interface
 - [ ] Sonar results
 - [ ] Jenkins results
+- [ ] Opioninated Example OAS
 
 ## References:
 
