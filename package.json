@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test-collection.js",
+    "test": "node run-collection.js",
     "start": "nodemon server.js"
   },
   "author": "",

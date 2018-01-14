@@ -8,11 +8,10 @@ Includes an example API and collection using `express`.
 
 >Prerequisites:
 ```
-node -v
-npm -v
+> node -v
+> npm -v
 ```
-tested on 
-![](node-version.gif)
+![node version image](node-version.gif)
 
 >Quick Start Demo: 
 ```
@@ -20,8 +19,7 @@ tested on
 > npm install && npm run start
 > npm run test
 ```
-
-## Intentions:
+## Project Intentions:
 
 * [] provide temporary values e.g. access tokens
 * [x] conditional flow APIs e.g. POST then GET [solved with `postman.setNextRequests`] 
