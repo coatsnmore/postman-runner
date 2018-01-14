@@ -96,6 +96,66 @@ paths:
           description: Error
           schema:
             $ref: '#/definitions/ErrorResponse'
+    put:
+      description: Update robot based on ID
+      summary: Update robot by ID
+      operationId: updateRobotById
+      produces:
+      - application/json
+      - text/html
+      responses:
+        '204':
+          description: No Content
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Robot'
+        401:
+          description: Unauthenticated
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        403:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        429:
+          description: Too Many Requests
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        500:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse' 
+    delete:
+      description: Delete robot based on ID
+      summary: Delete robot by ID
+      operationId: deleteRobotById
+      produces:
+      - application/json
+      - text/html
+      responses:
+        '204':
+          description: No Content
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Robot'
+        401:
+          description: Unauthenticated
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        403:
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        429:
+          description: Too Many Requests
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+        500:
+          description: Error
+          schema:
+            $ref: '#/definitions/ErrorResponse'
     parameters:
     - name: id
       in: path
