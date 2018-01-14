@@ -2,7 +2,7 @@
 
 Opinionated Test Runner built on [newman](https://github.com/postmanlabs/newman) to help test APIs using Postman collections.
 
-Includes an example API and collection using `express`.
+Includes an example API and collection using [express].
 
 [License](LICENSE.md)
 
@@ -21,18 +21,18 @@ Includes an example API and collection using `express`.
 ```
 ## Project Intentions:
 
-* [] provide temporary values e.g. access tokens
-* [x] conditional flow APIs e.g. POST then GET [solved with `postman.setNextRequests`] 
-* [] switch environments
-* [] run multiple collections
-* [] test coverage against oas
-* [] import OAS to bootstrap collection
-* [] bootstrap includes best practicess
-* [] bootstrap oAuth helpers
-* [] distribute as package?
-* [] CLI interface
-* [] Sonar results
-* [] Jenkins results
+- [] provide temporary values e.g. access tokens
+- [x] conditional flow APIs e.g. POST then GET [solved with `postman.setNextRequests`] 
+- [] switch environments
+- [] run multiple collections
+- [] test coverage against oas
+- [] import OAS to bootstrap collection
+- [] bootstrap includes best practicess
+- [] bootstrap oAuth helpers
+- [] distribute as package?
+- [] CLI interface
+- [] Sonar results
+- [] Jenkins results
 
 ## References:
 
